@@ -12,15 +12,35 @@ function clock() {
     minutes.innerHTML = b;
     seconds.innerHTML = c;
     am.innerHTML = d;
-
+   
 }
 setInterval(clock, 1000)
+
+function getform1(){
+    var formTime1 = form1.options1[form1.options1.selectedIndex].text
+    document.getElementById("preface-item1").innerHTML = formTime1;
+}
+
+function getform2(){
+    var formTime2 = form2.options2[form2.options2.selectedIndex].text
+    document.getElementById("preface-item2").innerHTML = formTime2;
+}
+function getform3(){
+    var formTime3 = form3.options3[form3.options3.selectedIndex].text
+    document.getElementById("preface-item3").innerHTML = formTime3;
+}
+function getform4(){
+    var formTime4 = form4.options4[form4.options4.selectedIndex].text
+    document.getElementById("preface-item4").innerHTML = formTime4;
+}
 
 function settime() {
     var i = document.getElementById('options1').value;
     var x = new Date().getHours();
     var g = new Date().getMinutes();
     var h = new Date().getSeconds();
+
+   
 
     if (i == x) {
         document.getElementById('right-down').style.backgroundImage = "url(wake-up-pic.jpg)";
@@ -49,4 +69,6 @@ function settime() {
         document.getElementById('right-up').textContent = "GO TO SLEEP..";
         document.getElementById('display').textContent = "GOOD NIGHT !!";
         }
+
+    
 }
